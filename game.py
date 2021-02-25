@@ -36,15 +36,15 @@ class Game:
 		for y in range(self.size):
 			for x in range(self.size):
 				currentCell = self.cells[y][x]
-				if not self.cells[y][x].stay:
-					if self.cells[y][x].setAlive:
-						self.cells[y][x].alive = True
-						self.cells[y][x].setAlive = False
-					if self.cells[y][x].setDead:
-						self.cells[y][x].alive = False
-						self.cells[y][x].setDead = False
+				if not currentCell.stay:
+					if currentCell.setAlive:
+						currentCell.alive = True
+						currentCell.setAlive = False
+					if currentCell.setDead:
+						currentCell.alive = False
+						currentCell.setDead = False
 				else:
-					self.stay = False
+					currentCell.stay = False
 
 					
 
